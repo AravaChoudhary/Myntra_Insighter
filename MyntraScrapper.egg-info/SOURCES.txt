@@ -1,0 +1,5 @@
+setup.py
+MyntraScrapper.egg-info/PKG-INFO
+MyntraScrapper.egg-info/SOURCES.txt
+MyntraScrapper.egg-info/dependency_links.txt
+MyntraScrapper.egg-info/top_level.txt
