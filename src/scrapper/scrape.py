@@ -12,9 +12,7 @@ from urllib.parse import quote
 
 from src.exception import CustomException
 
-
 class ScrapeReviews:
-
 
     def __init__(self , product_name:str , no_of_products:int):
 
@@ -55,6 +53,7 @@ class ScrapeReviews:
 
         except Exception as e:
             raise CustomException(e, sys)
+
 
     def extract_reviews(self, product_link):
         try:
@@ -108,7 +107,6 @@ class ScrapeReviews:
             last_height = new_height
 
 
-
     def extract_products(self, product_reviews: list):
         try:
             t2 = product_reviews["href"]
@@ -134,7 +132,9 @@ class ScrapeReviews:
                 user_name = i.findAll("div", {"class": "user-review-left"})
 
             reviews = []
+
             for i in range(len(user_rating)):
+
                 try:
                     rating = (
                         user_rating[i]
@@ -192,19 +192,20 @@ class ScrapeReviews:
 
         product_urls.pop(skip_index)
 
+
+
     def get_review_data(self) -> pd.DataFrame:
+
         try:
+
             # search_string = self.request.form["content"].replace(" ", "-")
             # no_of_products = int(self.request.form["prod_no"])
 
             product_urls = self.scrape_product_urls(product_name=self.product_name)
 
-            
-
             product_details = []
 
             review_len = 0
-
 
             while review_len < self.no_of_products:
                 product_url = product_urls[review_len]
@@ -224,9 +225,7 @@ class ScrapeReviews:
             
             data.to_csv("data.csv", index=False)
             
-            return data
-            
-            
+            return data 
                 
             # columns = data.columns
 
@@ -234,7 +233,5 @@ class ScrapeReviews:
             
             # return columns, values
         
-    
-
         except Exception as e:
             raise CustomException(e, sys)

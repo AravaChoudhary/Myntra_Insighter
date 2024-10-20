@@ -14,7 +14,7 @@ class MongoIO:
     def __init__(self):
 
         if MongoIO.mongo_ins is None:
-            mongo_db_url = "mongodb+srv://imran:TdPLW9Ad0OzpSSD2@cluster0.fv0lm61.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+            mongo_db_url = "mongodb+srv://Aranika:Nainika1234$@cluster0.d2qw0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
             if mongo_db_url is None:
                 raise Exception(f"Environment key: {MONGODB_URL_KEY} is not set.")
             MongoIO.mongo_ins = mongo(client_url=mongo_db_url , database_name=MONGO_DATABASE_NAME)
