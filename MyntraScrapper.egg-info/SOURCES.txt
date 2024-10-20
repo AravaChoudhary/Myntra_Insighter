@@ -1,5 +1,13 @@
+README.md
 setup.py
 MyntraScrapper.egg-info/PKG-INFO
 MyntraScrapper.egg-info/SOURCES.txt
 MyntraScrapper.egg-info/dependency_links.txt
 MyntraScrapper.egg-info/top_level.txt
+src/__init__.py
+src/exception.py
+src/cloud_io/__init__.py
+src/constants/__init__.py
+src/scrapper/__init__.py
+src/scrapper/scrape.py
+src/utils/__init__.py
